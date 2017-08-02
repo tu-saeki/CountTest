@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
     
@@ -64,7 +65,16 @@ class ViewController: UIViewController {
         label.text = String(number)
     }
     
+    @IBAction func onShowButtonPushed () {
+        
+//        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "NOW LOADING ...")
+    }
     
+    @IBAction func onDismissButtonPushed () {
+        
+        SVProgressHUD.dismiss()
+    }
     
 
 }
